@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EE445E19B6B37FD74B5AAF8 /* XBTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */; };
+		2EE4492D1F3B909F812B8AA8 /* XBTimelineColumnHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */; };
 		4293ED66176F6A8800AEAD86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293ED65176F6A8800AEAD86 /* UIKit.framework */; };
 		4293ED68176F6A8800AEAD86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293ED67176F6A8800AEAD86 /* Foundation.framework */; };
 		4293ED6A176F6A8800AEAD86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293ED69176F6A8800AEAD86 /* CoreGraphics.framework */; };
@@ -18,11 +20,13 @@
 		4293ED7C176F6A8800AEAD86 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4293ED7B176F6A8800AEAD86 /* Default-568h@2x.png */; };
 		4293ED82176F6A8800AEAD86 /* XBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293ED81176F6A8800AEAD86 /* XBViewController.m */; };
 		4293ED89176F6ACE00AEAD86 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4293ED88176F6ACE00AEAD86 /* Storyboard.storyboard */; };
-		4293ED8C176F6B6A00AEAD86 /* XBTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293ED8B176F6B6A00AEAD86 /* XBTimelineLayout.m */; };
-		4293ED921770D3FE00AEAD86 /* XBTimelineColumnHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293ED911770D3FE00AEAD86 /* XBTimelineColumnHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EE44005EE0A2B9197982A55 /* XBTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineLayout.h; sourceTree = "<group>"; };
+		2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineColumnHeaderView.h; sourceTree = "<group>"; };
+		2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineColumnHeaderView.m; sourceTree = "<group>"; };
+		2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineLayout.m; sourceTree = "<group>"; };
 		4293ED62176F6A8800AEAD86 /* TimelineCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimelineCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4293ED65176F6A8800AEAD86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4293ED67176F6A8800AEAD86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,10 +43,6 @@
 		4293ED80176F6A8800AEAD86 /* XBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBViewController.h; sourceTree = "<group>"; };
 		4293ED81176F6A8800AEAD86 /* XBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBViewController.m; sourceTree = "<group>"; };
 		4293ED88176F6ACE00AEAD86 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
-		4293ED8A176F6B6A00AEAD86 /* XBTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineLayout.h; sourceTree = "<group>"; };
-		4293ED8B176F6B6A00AEAD86 /* XBTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineLayout.m; sourceTree = "<group>"; };
-		4293ED901770D3FE00AEAD86 /* XBTimelineColumnHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineColumnHeaderView.h; sourceTree = "<group>"; };
-		4293ED911770D3FE00AEAD86 /* XBTimelineColumnHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineColumnHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EE44A722F0A308D0A533267 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */,
+				2EE44005EE0A2B9197982A55 /* XBTimelineLayout.h */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		4293ED59176F6A8800AEAD86 = {
 			isa = PBXGroup;
 			children = (
@@ -95,10 +104,9 @@
 				4293ED81176F6A8800AEAD86 /* XBViewController.m */,
 				4293ED6C176F6A8800AEAD86 /* Supporting Files */,
 				4293ED88176F6ACE00AEAD86 /* Storyboard.storyboard */,
-				4293ED8A176F6B6A00AEAD86 /* XBTimelineLayout.h */,
-				4293ED8B176F6B6A00AEAD86 /* XBTimelineLayout.m */,
-				4293ED901770D3FE00AEAD86 /* XBTimelineColumnHeaderView.h */,
-				4293ED911770D3FE00AEAD86 /* XBTimelineColumnHeaderView.m */,
+				2EE44A722F0A308D0A533267 /* Layout */,
+				2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */,
+				2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */,
 			);
 			path = TimelineCollectionView;
 			sourceTree = "<group>";
@@ -187,8 +195,8 @@
 				4293ED72176F6A8800AEAD86 /* main.m in Sources */,
 				4293ED76176F6A8800AEAD86 /* XBAppDelegate.m in Sources */,
 				4293ED82176F6A8800AEAD86 /* XBViewController.m in Sources */,
-				4293ED8C176F6B6A00AEAD86 /* XBTimelineLayout.m in Sources */,
-				4293ED921770D3FE00AEAD86 /* XBTimelineColumnHeaderView.m in Sources */,
+				2EE445E19B6B37FD74B5AAF8 /* XBTimelineLayout.m in Sources */,
+				2EE4492D1F3B909F812B8AA8 /* XBTimelineColumnHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

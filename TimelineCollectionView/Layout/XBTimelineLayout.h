@@ -19,6 +19,7 @@
 @protocol XBTimelineLayoutDelegate <NSObject>
 
 @required
+
 - (CGPoint)timelineLayout:(XBTimelineLayout *)timelineLayout offsetForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)timelineLayout:(XBTimelineLayout *)timelineLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)timelineLayout:(XBTimelineLayout *)timelineLayout heightForSectionAtIndex:(NSInteger)index;
