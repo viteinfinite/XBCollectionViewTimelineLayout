@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2EE445E19B6B37FD74B5AAF8 /* XBTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */; };
+		2EE445E19B6B37FD74B5AAF8 /* XBCollectionViewTimelineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44DC85F84EBA5A48FB891 /* XBCollectionViewTimelineLayout.m */; };
 		2EE4492D1F3B909F812B8AA8 /* XBTimelineColumnHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */; };
 		4293ED66176F6A8800AEAD86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293ED65176F6A8800AEAD86 /* UIKit.framework */; };
 		4293ED68176F6A8800AEAD86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293ED67176F6A8800AEAD86 /* Foundation.framework */; };
@@ -23,18 +23,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2EE44005EE0A2B9197982A55 /* XBTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineLayout.h; sourceTree = "<group>"; };
+		2EE44005EE0A2B9197982A55 /* XBCollectionViewTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBCollectionViewTimelineLayout.h; sourceTree = "<group>"; };
 		2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineColumnHeaderView.h; sourceTree = "<group>"; };
 		2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineColumnHeaderView.m; sourceTree = "<group>"; };
-		2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineLayout.m; sourceTree = "<group>"; };
-		4293ED62176F6A8800AEAD86 /* TimelineCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimelineCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EE44DC85F84EBA5A48FB891 /* XBCollectionViewTimelineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBCollectionViewTimelineLayout.m; sourceTree = "<group>"; };
+		4293ED62176F6A8800AEAD86 /* XBCollectionViewTimelineSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XBCollectionViewTimelineSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4293ED65176F6A8800AEAD86 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4293ED67176F6A8800AEAD86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4293ED69176F6A8800AEAD86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4293ED6D176F6A8800AEAD86 /* TimelineCollectionView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimelineCollectionView-Info.plist"; sourceTree = "<group>"; };
+		4293ED6D176F6A8800AEAD86 /* XBCollectionViewTimelineSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XBCollectionViewTimelineSample-Info.plist"; sourceTree = "<group>"; };
 		4293ED6F176F6A8800AEAD86 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4293ED71176F6A8800AEAD86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4293ED73176F6A8800AEAD86 /* TimelineCollectionView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimelineCollectionView-Prefix.pch"; sourceTree = "<group>"; };
+		4293ED73176F6A8800AEAD86 /* XBCollectionViewTimelineSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XBCollectionViewTimelineSample-Prefix.pch"; sourceTree = "<group>"; };
 		4293ED74176F6A8800AEAD86 /* XBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAppDelegate.h; sourceTree = "<group>"; };
 		4293ED75176F6A8800AEAD86 /* XBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAppDelegate.m; sourceTree = "<group>"; };
 		4293ED77176F6A8800AEAD86 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		2EE44A722F0A308D0A533267 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				2EE44DC85F84EBA5A48FB891 /* XBTimelineLayout.m */,
-				2EE44005EE0A2B9197982A55 /* XBTimelineLayout.h */,
+				2EE44DC85F84EBA5A48FB891 /* XBCollectionViewTimelineLayout.m */,
+				2EE44005EE0A2B9197982A55 /* XBCollectionViewTimelineLayout.h */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -71,7 +71,7 @@
 		4293ED59176F6A8800AEAD86 = {
 			isa = PBXGroup;
 			children = (
-				4293ED6B176F6A8800AEAD86 /* TimelineCollectionView */,
+				4293ED6B176F6A8800AEAD86 /* CollectionViewTimeline */,
 				4293ED64176F6A8800AEAD86 /* Frameworks */,
 				4293ED63176F6A8800AEAD86 /* Products */,
 			);
@@ -80,7 +80,7 @@
 		4293ED63176F6A8800AEAD86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4293ED62176F6A8800AEAD86 /* TimelineCollectionView.app */,
+				4293ED62176F6A8800AEAD86 /* XBCollectionViewTimelineSample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4293ED6B176F6A8800AEAD86 /* TimelineCollectionView */ = {
+		4293ED6B176F6A8800AEAD86 /* CollectionViewTimeline */ = {
 			isa = PBXGroup;
 			children = (
 				4293ED74176F6A8800AEAD86 /* XBAppDelegate.h */,
@@ -108,16 +108,17 @@
 				2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */,
 				2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */,
 			);
+			name = CollectionViewTimeline;
 			path = TimelineCollectionView;
 			sourceTree = "<group>";
 		};
 		4293ED6C176F6A8800AEAD86 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4293ED6D176F6A8800AEAD86 /* TimelineCollectionView-Info.plist */,
+				4293ED6D176F6A8800AEAD86 /* XBCollectionViewTimelineSample-Info.plist */,
 				4293ED6E176F6A8800AEAD86 /* InfoPlist.strings */,
 				4293ED71176F6A8800AEAD86 /* main.m */,
-				4293ED73176F6A8800AEAD86 /* TimelineCollectionView-Prefix.pch */,
+				4293ED73176F6A8800AEAD86 /* XBCollectionViewTimelineSample-Prefix.pch */,
 				4293ED77176F6A8800AEAD86 /* Default.png */,
 				4293ED79176F6A8800AEAD86 /* Default@2x.png */,
 				4293ED7B176F6A8800AEAD86 /* Default-568h@2x.png */,
@@ -128,9 +129,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4293ED61176F6A8800AEAD86 /* TimelineCollectionView */ = {
+		4293ED61176F6A8800AEAD86 /* XBCollectionViewTimelineSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4293ED85176F6A8800AEAD86 /* Build configuration list for PBXNativeTarget "TimelineCollectionView" */;
+			buildConfigurationList = 4293ED85176F6A8800AEAD86 /* Build configuration list for PBXNativeTarget "XBCollectionViewTimelineSample" */;
 			buildPhases = (
 				4293ED5E176F6A8800AEAD86 /* Sources */,
 				4293ED5F176F6A8800AEAD86 /* Frameworks */,
@@ -140,9 +141,9 @@
 			);
 			dependencies = (
 			);
-			name = TimelineCollectionView;
+			name = XBCollectionViewTimelineSample;
 			productName = TimelineCollectionView;
-			productReference = 4293ED62176F6A8800AEAD86 /* TimelineCollectionView.app */;
+			productReference = 4293ED62176F6A8800AEAD86 /* XBCollectionViewTimelineSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +156,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Xebia IT Architects";
 			};
-			buildConfigurationList = 4293ED5D176F6A8800AEAD86 /* Build configuration list for PBXProject "TimelineCollectionView" */;
+			buildConfigurationList = 4293ED5D176F6A8800AEAD86 /* Build configuration list for PBXProject "XBCollectionViewTimelineSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -167,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4293ED61176F6A8800AEAD86 /* TimelineCollectionView */,
+				4293ED61176F6A8800AEAD86 /* XBCollectionViewTimelineSample */,
 			);
 		};
 /* End PBXProject section */
@@ -195,7 +196,7 @@
 				4293ED72176F6A8800AEAD86 /* main.m in Sources */,
 				4293ED76176F6A8800AEAD86 /* XBAppDelegate.m in Sources */,
 				4293ED82176F6A8800AEAD86 /* XBViewController.m in Sources */,
-				2EE445E19B6B37FD74B5AAF8 /* XBTimelineLayout.m in Sources */,
+				2EE445E19B6B37FD74B5AAF8 /* XBCollectionViewTimelineLayout.m in Sources */,
 				2EE4492D1F3B909F812B8AA8 /* XBTimelineColumnHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +277,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimelineCollectionView/TimelineCollectionView-Prefix.pch";
-				INFOPLIST_FILE = "TimelineCollectionView/TimelineCollectionView-Info.plist";
+				GCC_PREFIX_HEADER = "TimelineCollectionView/XBCollectionViewTimelineSample-Prefix.pch";
+				INFOPLIST_FILE = "TimelineCollectionView/XBCollectionViewTimelineSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XBCollectionViewTimelineSample;
 				PROVISIONING_PROFILE = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -293,10 +294,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimelineCollectionView/TimelineCollectionView-Prefix.pch";
-				INFOPLIST_FILE = "TimelineCollectionView/TimelineCollectionView-Info.plist";
+				GCC_PREFIX_HEADER = "TimelineCollectionView/XBCollectionViewTimelineSample-Prefix.pch";
+				INFOPLIST_FILE = "TimelineCollectionView/XBCollectionViewTimelineSample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = XBCollectionViewTimelineSample;
 				PROVISIONING_PROFILE = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				TARGETED_DEVICE_FAMILY = 2;
@@ -307,7 +308,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4293ED5D176F6A8800AEAD86 /* Build configuration list for PBXProject "TimelineCollectionView" */ = {
+		4293ED5D176F6A8800AEAD86 /* Build configuration list for PBXProject "XBCollectionViewTimelineSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4293ED83176F6A8800AEAD86 /* Debug */,
@@ -316,13 +317,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4293ED85176F6A8800AEAD86 /* Build configuration list for PBXNativeTarget "TimelineCollectionView" */ = {
+		4293ED85176F6A8800AEAD86 /* Build configuration list for PBXNativeTarget "XBCollectionViewTimelineSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4293ED86176F6A8800AEAD86 /* Debug */,
 				4293ED87176F6A8800AEAD86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

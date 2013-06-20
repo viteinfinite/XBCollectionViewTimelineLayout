@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 Xebia IT Architects. All rights reserved.
 //
 
-#import "XBTimelineLayout.h"
+#import "XBCollectionViewTimelineLayout.h"
 #import "XBTimelineColumnHeaderView.h"
 
-@interface XBTimelineLayout() {
+@interface XBCollectionViewTimelineLayout() {
     CGSize _collectionViewContentSize;
 }
 
@@ -19,7 +19,7 @@
 
 @end
 
-@implementation XBTimelineLayout
+@implementation XBCollectionViewTimelineLayout
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {

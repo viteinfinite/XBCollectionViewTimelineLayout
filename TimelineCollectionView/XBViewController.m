@@ -73,32 +73,32 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
 
 #pragma mark - Timeline layout delegate
 
-- (CGPoint)timelineLayout:(XBTimelineLayout *)timelineLayout offsetForItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGPoint)timelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout offsetForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGPointMake(indexPath.item * 50.0, 0);
 }
 
-- (CGFloat)timelineLayout:(XBTimelineLayout *)timelineLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)timelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return 50.0;
 }
 
-- (CGFloat)timelineLayout:(XBTimelineLayout *)timelineLayout heightForSectionAtIndex:(NSInteger)index
+- (CGFloat)timelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout heightForSectionAtIndex:(NSInteger)index
 {
     return 50.0;
 }
 
-- (CGFloat)heightForColumnHeaderInTimelineLayout:(XBTimelineLayout *)timelineLayout
+- (CGFloat)heightForColumnHeaderInTimelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout
 {
     return 100.0;
 }
 
-- (CGFloat)widthForRowHeaderInTimelineLayout:(XBTimelineLayout *)timelineLayout
+- (CGFloat)widthForRowHeaderInTimelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout
 {
     return 100.0;
 }
 
-- (NSString *)kindForColumnHeaderInTimelineLayout:(XBTimelineLayout *)timelineLayout
+- (NSString *)kindForColumnHeaderInTimelineLayout:(XBCollectionViewTimelineLayout *)timelineLayout
 {
     return XBTimelineColumnHeaderKind;
 }

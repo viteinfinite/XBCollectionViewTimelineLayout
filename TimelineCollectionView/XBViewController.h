@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XBTimelineLayout.h"
+#import "XBCollectionViewTimelineLayout.h"
 
 UIKIT_EXTERN NSString * const XBTimelineColumnHeaderKind;
 
-@interface XBViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, XBTimelineLayoutDelegate>
+@interface XBViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, XBCollectionViewTimelineLayoutDelegate>
 
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 

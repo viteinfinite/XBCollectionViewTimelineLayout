@@ -14,7 +14,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vhS-7a-5iU">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewLayout key="collectionViewLayout" id="OVG-lT-6ih" customClass="XBTimelineLayout">
+                                <collectionViewLayout key="collectionViewLayout" id="OVG-lT-6ih" customClass="XBCollectionViewTimelineLayout">
                                     <connections>
                                         <outlet property="delegate" destination="aqv-By-lPt" id="4K3-tf-w8A"/>
                                     </connections>
@@ -74,15 +74,6 @@
         </class>
         <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-        <class className="XBTimelineLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/XBTimelineLayout.h"/>
-            <relationships>
-                <relationship kind="outlet" name="delegate"/>
-            </relationships>
         </class>
         <class className="XBViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/XBViewController.h"/>
