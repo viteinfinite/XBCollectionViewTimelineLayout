@@ -170,4 +170,9 @@
     _collectionViewContentSize = CGSizeZero;
 }
 
+- (PSUICollectionViewLayoutAttributes *)layoutAttributesForDecorationViewOfKind:(NSString*)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    return self.columnHeaderLayoutAttributes;
+}
+
 @end

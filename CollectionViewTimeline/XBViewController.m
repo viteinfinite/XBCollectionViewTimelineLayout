@@ -50,7 +50,9 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
         [reusableView addSubview:label];
         return reusableView;
     } else if (kind == XBTimelineColumnHeaderKind) {
-        return [self.collectionView dequeueReusableSupplementaryViewOfKind:XBTimelineColumnHeaderKind withReuseIdentifier:XBTimelineColumnReuseIdentifier forIndexPath:indexPath];
+        return [self.collectionView dequeueReusableSupplementaryViewOfKind:XBTimelineColumnHeaderKind
+                                                       withReuseIdentifier:XBTimelineColumnReuseIdentifier
+                                                              forIndexPath:indexPath];
     }
     
     return nil;
@@ -59,7 +61,7 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
 
 - (NSInteger)collectionView:(PSUICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 20;
+    return 10;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(PSUICollectionView *)collectionView
