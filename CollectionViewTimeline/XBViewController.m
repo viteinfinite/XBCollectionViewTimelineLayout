@@ -58,16 +58,24 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
     return nil;
 }
 
-
 - (NSInteger)collectionView:(PSUICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    return 20;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(PSUICollectionView *)collectionView
 {
     return 20;
 }
+
+// iOS 5.0 only
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.collectionView) {
+        [self.collectionView.collectionViewLayout invalidateLayout];
+    }
+}
+
 
 #pragma mark - Timeline layout delegate
 

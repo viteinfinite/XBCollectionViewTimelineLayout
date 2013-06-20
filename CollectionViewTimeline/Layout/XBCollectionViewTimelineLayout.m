@@ -62,7 +62,7 @@
                                               cumulativeHeight + columnHeaderHeight,
                                               itemWidth,
                                               sectionHeight);
-            itemAttributes.zIndex = 1024;
+            itemAttributes.zIndex = 0;
             
             [cellLayoutAttributes addObject:itemAttributes];
             
@@ -75,7 +75,7 @@
                                             cumulativeHeight + columnHeaderHeight,
                                             rowHeaderWidth,
                                             sectionHeight);
-        headerAttributes.zIndex = 2048;
+        headerAttributes.zIndex = 2;
         headerLayoutAttributes[section] = headerAttributes;
         
         cumulativeHeight += sectionHeight;
@@ -88,6 +88,7 @@
     
     NSString *columnHeaderKind = [self.delegate kindForColumnHeaderInTimelineLayout:self];
     self.columnHeaderLayoutAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:columnHeaderKind withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+    self.columnHeaderLayoutAttributes.zIndex = 2;
     self.columnHeaderLayoutAttributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, columnHeaderHeight);
 }
 
