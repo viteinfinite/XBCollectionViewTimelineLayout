@@ -23,10 +23,6 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
     [super viewDidLoad];
     
     [[self.collectionView collectionViewLayout] registerClass:[XBTimelineColumnHeaderView class] forDecorationViewOfKind:XBTimelineColumnHeaderKind];
-    
-//    [self.collectionView registerClass:[XBTimelineColumnHeaderView class]
-//            forSupplementaryViewOfKind:XBTimelineColumnHeaderKind
-//                   withReuseIdentifier:XBTimelineColumnReuseIdentifier];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,17 +33,17 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
 
 #pragma mark - Data Source
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (PSUICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
+    PSUICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     return cell;
 }
 
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+- (PSUICollectionReusableView *)collectionView:(PSUICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
-    if (kind == UICollectionElementKindSectionHeader) {
-        UICollectionReusableView *reusableView = [[UICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    if (kind == PSTCollectionElementKindSectionHeader) {
+        PSUICollectionReusableView *reusableView = [[PSUICollectionReusableView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         UILabel *label = [[UILabel alloc] initWithFrame:reusableView.bounds];
         [label setBackgroundColor:[UIColor whiteColor]];
         label.text = [NSString stringWithFormat:@"H%d", indexPath.section];
@@ -61,12 +57,12 @@ static NSString * const XBTimelineColumnReuseIdentifier = @"TimelineColumnHeader
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(PSUICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 20;
 }
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+- (NSInteger)numberOfSectionsInCollectionView:(PSUICollectionView *)collectionView
 {
     return 20;
 }

@@ -20,9 +20,11 @@
 		4293ED7C176F6A8800AEAD86 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4293ED7B176F6A8800AEAD86 /* Default-568h@2x.png */; };
 		4293ED82176F6A8800AEAD86 /* XBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4293ED81176F6A8800AEAD86 /* XBViewController.m */; };
 		4293ED89176F6ACE00AEAD86 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4293ED88176F6ACE00AEAD86 /* Storyboard.storyboard */; };
+		CABE8754BEB147B78F287215 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD25DF80E54F469585B56421 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1ABABDBE20D04BADB33DFBE7 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		2EE44005EE0A2B9197982A55 /* XBCollectionViewTimelineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBCollectionViewTimelineLayout.h; sourceTree = "<group>"; };
 		2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTimelineColumnHeaderView.h; sourceTree = "<group>"; };
 		2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTimelineColumnHeaderView.m; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 		4293ED80176F6A8800AEAD86 /* XBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBViewController.h; sourceTree = "<group>"; };
 		4293ED81176F6A8800AEAD86 /* XBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBViewController.m; sourceTree = "<group>"; };
 		4293ED88176F6ACE00AEAD86 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		DD25DF80E54F469585B56421 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 				4293ED66176F6A8800AEAD86 /* UIKit.framework in Frameworks */,
 				4293ED68176F6A8800AEAD86 /* Foundation.framework in Frameworks */,
 				4293ED6A176F6A8800AEAD86 /* CoreGraphics.framework in Frameworks */,
+				CABE8754BEB147B78F287215 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 				4293ED6B176F6A8800AEAD86 /* CollectionViewTimeline */,
 				4293ED64176F6A8800AEAD86 /* Frameworks */,
 				4293ED63176F6A8800AEAD86 /* Products */,
+				1ABABDBE20D04BADB33DFBE7 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +96,7 @@
 				4293ED65176F6A8800AEAD86 /* UIKit.framework */,
 				4293ED67176F6A8800AEAD86 /* Foundation.framework */,
 				4293ED69176F6A8800AEAD86 /* CoreGraphics.framework */,
+				DD25DF80E54F469585B56421 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,8 +114,7 @@
 				2EE44C2D7306BCCA9773C96A /* XBTimelineColumnHeaderView.m */,
 				2EE4420FC119862C883C837C /* XBTimelineColumnHeaderView.h */,
 			);
-			name = CollectionViewTimeline;
-			path = TimelineCollectionView;
+			path = CollectionViewTimeline;
 			sourceTree = "<group>";
 		};
 		4293ED6C176F6A8800AEAD86 /* Supporting Files */ = {
@@ -133,16 +138,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4293ED85176F6A8800AEAD86 /* Build configuration list for PBXNativeTarget "XBCollectionViewTimelineSample" */;
 			buildPhases = (
+				62D9174909604C2B9D8BE5C5 /* Check Pods Manifest.lock */,
 				4293ED5E176F6A8800AEAD86 /* Sources */,
 				4293ED5F176F6A8800AEAD86 /* Frameworks */,
 				4293ED60176F6A8800AEAD86 /* Resources */,
+				D28787F30FD743298D48E5CF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = XBCollectionViewTimelineSample;
-			productName = TimelineCollectionView;
+			productName = CollectionViewTimeline;
 			productReference = 4293ED62176F6A8800AEAD86 /* XBCollectionViewTimelineSample.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -187,6 +194,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62D9174909604C2B9D8BE5C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+		};
+		D28787F30FD743298D48E5CF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4293ED5E176F6A8800AEAD86 /* Sources */ = {
@@ -273,13 +311,14 @@
 		};
 		4293ED86176F6A8800AEAD86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ABABDBE20D04BADB33DFBE7 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimelineCollectionView/XBCollectionViewTimelineSample-Prefix.pch";
-				INFOPLIST_FILE = "TimelineCollectionView/XBCollectionViewTimelineSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				GCC_PREFIX_HEADER = "CollectionViewTimeline/XBCollectionViewTimelineSample-Prefix.pch";
+				INFOPLIST_FILE = "CollectionViewTimeline/XBCollectionViewTimelineSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = XBCollectionViewTimelineSample;
 				PROVISIONING_PROFILE = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
@@ -290,13 +329,14 @@
 		};
 		4293ED87176F6A8800AEAD86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ABABDBE20D04BADB33DFBE7 /* Pods.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Simone Civetta (5NH7J8UHDM)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "TimelineCollectionView/XBCollectionViewTimelineSample-Prefix.pch";
-				INFOPLIST_FILE = "TimelineCollectionView/XBCollectionViewTimelineSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				GCC_PREFIX_HEADER = "CollectionViewTimeline/XBCollectionViewTimelineSample-Prefix.pch";
+				INFOPLIST_FILE = "CollectionViewTimeline/XBCollectionViewTimelineSample-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = XBCollectionViewTimelineSample;
 				PROVISIONING_PROFILE = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "ABE68190-0B96-48E3-9DF6-DB5DD2EF79F1";

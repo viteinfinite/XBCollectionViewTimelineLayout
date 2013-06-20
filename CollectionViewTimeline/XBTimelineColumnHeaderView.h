@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PSTCollectionView/PSTCollectionView.h>
 
-@interface XBTimelineColumnHeaderView : UICollectionReusableView
+@interface XBTimelineColumnHeaderView : PSUICollectionReusableView
 
 @end

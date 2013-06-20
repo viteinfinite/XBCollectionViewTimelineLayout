@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "XBCollectionViewTimelineLayout.h"
+#import <PSTCollectionView/PSTCollectionView.h>
 
 UIKIT_EXTERN NSString * const XBTimelineColumnHeaderKind;
 
-@interface XBViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, XBCollectionViewTimelineLayoutDelegate>
+@interface XBViewController : UIViewController<PSUICollectionViewDataSource, PSUICollectionViewDelegate, XBCollectionViewTimelineLayoutDelegate>
 
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet PSUICollectionView *collectionView;
 
 @end

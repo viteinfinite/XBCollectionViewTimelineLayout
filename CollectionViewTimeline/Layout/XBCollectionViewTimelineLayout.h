@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PSTCollectionView/PSTCollectionView.h>
 
 @protocol XBCollectionViewTimelineLayoutDelegate;
 
-@interface XBCollectionViewTimelineLayout : UICollectionViewLayout
+@interface XBCollectionViewTimelineLayout : PSUICollectionViewLayout
 
 @property (nonatomic, weak) IBOutlet id<XBCollectionViewTimelineLayoutDelegate> delegate;
 

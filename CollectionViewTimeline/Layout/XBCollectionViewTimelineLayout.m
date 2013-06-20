@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) NSArray *cellLayoutAttributes;
 @property (nonatomic, strong) NSArray *rowHeaderLayoutAttributes;
-@property (nonatomic, strong) UICollectionViewLayoutAttributes *columnHeaderLayoutAttributes;
+@property (nonatomic, strong) PSUICollectionViewLayoutAttributes *columnHeaderLayoutAttributes;
 
 @end
 
@@ -57,7 +57,7 @@
             CGFloat itemWidth = [self.delegate timelineLayout:self widthForItemAtIndexPath:indexPath];
             CGPoint offset = [self.delegate timelineLayout:self offsetForItemAtIndexPath:indexPath];
             
-            UICollectionViewLayoutAttributes *itemAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+            PSUICollectionViewLayoutAttributes *itemAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
             itemAttributes.frame = CGRectMake(offset.x + rowHeaderWidth,
                                               cumulativeHeight + columnHeaderHeight,
                                               itemWidth,
@@ -70,7 +70,7 @@
         }
         
         // Calculate the frame for each row header
-        UICollectionViewLayoutAttributes *headerAttributes = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
+        PSUICollectionViewLayoutAttributes *headerAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:PSTCollectionElementKindSectionHeader withIndexPath:[NSIndexPath indexPathForItem:0 inSection:section]];
         headerAttributes.frame = CGRectMake(0,
                                             cumulativeHeight + columnHeaderHeight,
                                             rowHeaderWidth,
@@ -87,7 +87,7 @@
     self.rowHeaderLayoutAttributes = headerLayoutAttributes;
     
     NSString *columnHeaderKind = [self.delegate kindForColumnHeaderInTimelineLayout:self];
-    self.columnHeaderLayoutAttributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:columnHeaderKind withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+    self.columnHeaderLayoutAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:columnHeaderKind withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
     self.columnHeaderLayoutAttributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, columnHeaderHeight);
 }
 
@@ -133,14 +133,14 @@
     NSMutableArray *allAttributes = [NSMutableArray array];
         
     // Show only pertinent layoutAttributes
-    for (UICollectionViewLayoutAttributes *attributes in self.cellLayoutAttributes) {
+    for (PSUICollectionViewLayoutAttributes *attributes in self.cellLayoutAttributes) {
         if (CGRectIntersectsRect(rect, attributes.frame)) {
             [allAttributes addObject:attributes];
         }
     }
     
     // Header
-    for (UICollectionViewLayoutAttributes *attributes in self.rowHeaderLayoutAttributes) {
+    for (PSUICollectionViewLayoutAttributes *attributes in self.rowHeaderLayoutAttributes) {
         attributes.frame = (CGRect){
             .origin = CGPointMake(self.collectionView.contentOffset.x, attributes.frame.origin.y),
             .size = CGSizeMake(attributes.frame.size.width, attributes.frame.size.height)
