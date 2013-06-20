@@ -7,7 +7,6 @@
 //
 
 #import "XBCollectionViewTimelineLayout.h"
-#import "XBTimelineColumnHeaderView.h"
 
 @interface XBCollectionViewTimelineLayout() {
     CGSize _collectionViewContentSize;

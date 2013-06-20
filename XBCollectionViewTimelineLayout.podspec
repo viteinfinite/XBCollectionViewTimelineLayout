@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "XBCollectionViewTimelineLayout"
   s.version      = "0.0.1"
-  s.summary      = "XBCollectionViewTimelineLayout provides an UICollectionViewLayout with fixed row headers and column header allowing to display data in a timeline-like fashion"
+  s.summary      = "XBCollectionViewTimelineLayout provides a collectionViewLayout with fixed row and column headers for displaying a timeline of events."
   s.homepage     = "https://github.com/xebia-france/XBCollectionViewTimelineLayout"
   s.author       = { 'Simone Civetta' => 'viteinfinite@gmail.com' }
 
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '5.0'
 
-  s.source_files = 'TimelineCollectionView/Layout/**/*.{h,m}'
+  s.source_files = 'CollectionViewTimeline/Layout/**/*.{h,m}'
 
   s.requires_arc = true
 
