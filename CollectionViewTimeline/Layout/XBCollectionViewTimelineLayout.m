@@ -35,7 +35,12 @@
     }
     
     CGFloat rowHeaderWidth = [self.delegate widthForRowHeaderInTimelineLayout:self];
-    CGFloat columnHeaderHeight = [self.delegate heightForColumnHeaderInTimelineLayout:self];
+    CGFloat columnHeaderHeight = 0;
+    
+    if ([self.delegate respondsToSelector:@selector(heightForColumnHeaderInTimelineLayout:)]) {
+        columnHeaderHeight = [self.delegate heightForColumnHeaderInTimelineLayout:self];
+    }
+    
     
     NSMutableArray *cellLayoutAttributes = [NSMutableArray array];
     NSMutableArray *headerLayoutAttributes = [NSMutableArray array];
@@ -74,7 +79,7 @@
                                             cumulativeHeight + columnHeaderHeight,
                                             rowHeaderWidth,
                                             sectionHeight);
-        headerAttributes.zIndex = 2;
+        headerAttributes.zIndex = 1;
         headerLayoutAttributes[section] = headerAttributes;
         
         cumulativeHeight += sectionHeight;
@@ -85,10 +90,12 @@
     self.cellLayoutAttributes = cellLayoutAttributes;
     self.rowHeaderLayoutAttributes = headerLayoutAttributes;
     
-    NSString *columnHeaderKind = [self.delegate kindForColumnHeaderInTimelineLayout:self];
-    self.columnHeaderLayoutAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:columnHeaderKind withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
-    self.columnHeaderLayoutAttributes.zIndex = 2;
-    self.columnHeaderLayoutAttributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, columnHeaderHeight);
+    if ([self.delegate respondsToSelector:@selector(kindForColumnHeaderInTimelineLayout:)]) {
+        NSString *columnHeaderKind = [self.delegate kindForColumnHeaderInTimelineLayout:self];
+        self.columnHeaderLayoutAttributes = [PSUICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:columnHeaderKind withIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+        self.columnHeaderLayoutAttributes.zIndex = 2;
+        self.columnHeaderLayoutAttributes.frame = CGRectMake(0, 0, self.collectionView.frame.size.width, columnHeaderHeight);
+    }
 }
 
 
@@ -119,7 +126,11 @@
     }
     
     CGFloat rowHeaderWidth = [self.delegate widthForRowHeaderInTimelineLayout:self];
-    CGFloat columnHeaderHeight = [self.delegate heightForColumnHeaderInTimelineLayout:self];
+    CGFloat columnHeaderHeight = 0;
+    
+    if ([self.delegate respondsToSelector:@selector(heightForColumnHeaderInTimelineLayout:)]) {
+        columnHeaderHeight = [self.delegate heightForColumnHeaderInTimelineLayout:self];
+    }
     
     _collectionViewContentSize = CGSizeMake(maxWidth + rowHeaderWidth,
                                             cumulativeHeight + columnHeaderHeight);
@@ -149,12 +160,14 @@
         [allAttributes addObject:attributes];
     }
     
-    self.columnHeaderLayoutAttributes.frame = (CGRect){
-        .origin = CGPointMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y),
-        .size = CGSizeMake(self.columnHeaderLayoutAttributes.frame.size.width, self.columnHeaderLayoutAttributes.frame.size.height)
-    };
-    
-    [allAttributes addObject:self.columnHeaderLayoutAttributes];
+    if (self.columnHeaderLayoutAttributes) {
+        self.columnHeaderLayoutAttributes.frame = (CGRect){
+            .origin = CGPointMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y),
+            .size = CGSizeMake(self.columnHeaderLayoutAttributes.frame.size.width, self.columnHeaderLayoutAttributes.frame.size.height)
+        };
+        
+        [allAttributes addObject:self.columnHeaderLayoutAttributes];
+    }
     
     return allAttributes;
 }
