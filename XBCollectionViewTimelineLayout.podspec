@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.dependency 'PSTCollectionView',  '1.1.0'
+  s.dependency 'PSTCollectionView',  '~> 1.2.0'
 
 end
